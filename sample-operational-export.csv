@@ -1,0 +1,7 @@
+id,date,category,description,amount,status
+1,2026-09-15,receivable,Invoice #1042,1800,pending
+2,2026-09-15,payable,Supplier invoice #778,950,due
+3,2026-09-16,receivable,Invoice #1045,4200,pending
+4,2026-09-16,expense,Advertising campaign,1200,active
+5,2026-09-17,payable,Software subscription,299,due
+6,2026-09-17,receivable,Invoice #1048,750,pending
