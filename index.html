@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Daily Action Report — experimento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">WS-016 · experimento digital</p>
+      <h1>Transforme seu export operacional em uma lista de ações.</h1>
+      <p class="lead">Envie um CSV e veja quais itens merecem sua atenção primeiro. O arquivo é processado localmente neste navegador.</p>
+    </header>
+    <section class="card">
+      <div class="row between"><div><h2>1. Gere seu relatório</h2><p class="muted">Use uma amostra ou seu próprio CSV.</p></div><button id="sampleBtn" class="secondary">Usar amostra</button></div>
+      <label class="drop" for="csvInput"><strong>Escolher CSV</strong><span>Colunas: id, date, category, description, amount, status</span><input id="csvInput" type="file" accept=".csv,text/csv"></label>
+      <div id="status" class="status" role="status"></div>
+    </section>
+    <section id="reportSection" class="card hidden">
+      <div class="row between"><div><h2>2. Ações priorizadas</h2><p id="summary" class="muted"></p></div><button id="downloadReport" class="secondary">Baixar relatório</button></div>
+      <ol id="actions" class="actions"></ol>
+    </section>
+    <section id="observationSection" class="card hidden">
+      <h2>3. O resultado foi útil?</h2><p class="muted">Sua resposta é uma observação do experimento. Nada é enviado automaticamente ao servidor.</p>
+      <div class="grid">
+        <label>Tempo economizado (min)<input id="timeSaved" type="number" min="0" step="1" placeholder="ex.: 20"></label>
+        <label>Ação mais útil<input id="usefulAction" type="text" placeholder="ex.: cobrança da fatura"></label>
+        <label>Usaria novamente?<select id="repeatIntent"><option value="">Selecione</option><option>sim</option><option>talvez</option><option>não</option></select></label>
+        <label>Pagaria por isso?<select id="willingnessToPay"><option value="">Selecione</option><option>sim</option><option>talvez</option><option>não</option></select></label>
+      </div>
+      <label>Comentário (opcional)<textarea id="comment" rows="4" placeholder="O que tornou o relatório útil ou inútil?"></textarea></label>
+      <div class="row between"><span id="observationStatus" class="status"></span><button id="downloadObservation">Exportar observação</button></div>
+    </section>
+    <footer>Experimento isolado · sem conta · sem pagamento · sem envio de dados operacionais.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
